@@ -12,7 +12,7 @@ elif [ $1 == "-h" -o $1 == "--help" ]; then
 	echo '  \ V  V /| |_____| (__|   <'
 	echo '   \_/\_/ |_|      \___|_|\_\'
 	echo
-	echo wi-ck wifi cracking automation script
+	echo 'wi-ck wifi cracking automation script'
 	echo 'Usage: wi-ck <path>'
 	echo 'Saves the capture file to <path>'
 	echo
