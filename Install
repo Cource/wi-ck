@@ -3,4 +3,4 @@ echo [+]Adding execute permissions
 chmod +x wi-ck
 echo [+]Installing wi-ck
 mv wi-ck /usr/local/bin/wi-ck
-[*]Successfully installed wi-ck
+echo [*]Successfully installed wi-ck
