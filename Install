@@ -1,6 +1,6 @@
 #! usr/bin/sh
-echo [+]Adding execute permissions
+echo "[+]Adding execute permissions"
 chmod +x wi-ck
-echo [+]Installing wi-ck
+echo "[+]Installing wi-ck"
 mv wi-ck /usr/local/bin/wi-ck
-echo [#]Successfully installed wi-ck
+echo "[#]Successfully installed wi-ck"
