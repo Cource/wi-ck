@@ -12,7 +12,7 @@ elif [ $1 == "-h" -o $1 == "--help" ]; then
 	echo '  \ V  V /| |_____| (__|   <'
 	echo '   \_/\_/ |_|      \___|_|\_\'
 	echo
-	echo 'wi-ck wifi cracking automation script'
+	echo wi-ck wifi cracking automation script
 	echo 'Usage: wi-ck <path>'
 	echo 'Saves the capture file to <path>'
 	echo
@@ -20,11 +20,13 @@ elif [ $1 == "-h" -o $1 == "--help" ]; then
 	echo '--help, -h			Displays this help'
 	echo '-s, --stop			Stop the monitor interface'
 	echo '-c, --crack <wordlist> <capfile>	crack the capture file'
-	echo '->(for kali users: use -k or --kali after -c to use rockyou.txt.gz)'
+	echo '->(kali users: use -k or --kali after -c to use rockyou.txt.gz)'
 	echo
 elif [ "$1" == "-s" -o "$1" == "--stop" ]; then
 	echo '[-]Stopping the monitor interface'
+	echo =========
 	airmon-ng stop wlan0mon
+	echo =========
 elif [ "$1" == "-c" -o "$1" == "--crack" ]; then
 	if [ "$2" == "-k" -o "$2" == "--kali" ]; then
 		if uname -a | grep -q 'kali'; then
@@ -40,7 +42,14 @@ elif [ "$1" == "-c" -o "$1" == "--crack" ]; then
 	fi
 else
 	echo '[+]Starting the monitor interface'
+	echo =========
 	airmon-ng start wlan0
-	echo '[+] Dumping the traffic and handshakes to' $1
-	airodump-ng wlan0mon -w $1
+	echo =========
+	if [ "$1" == "" ];  then
+		echo "[+]Dumping the traffic and handsakes to '/tmp/capture'"
+		xterm -e airodump-ng wlan0mon -w /tmp/capture
+	else
+		echo '[+]Dumping the traffic and handshakes to' "'$1'"
+		xterm -e airodump-ng wlan0mon -w $1
+	fi
 fi
