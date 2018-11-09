@@ -15,7 +15,7 @@ To install this scirpt:
 
 ## Changelog:
 <pre>
-v(0.0.1): added a default dumping path to /tmp/crack so now you just have to 
-          type 'wi-ck' and it does everything by itself now uses 
-          xterm to display the ongoing dump
+v(0.0.1): - Added a default dumping path to /tmp/crack so now you just have to 
+            type 'wi-ck' and it does everything by itself 
+          - Now uses xterm to display the ongoing dump
 </pre>
