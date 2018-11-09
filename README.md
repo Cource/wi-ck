@@ -2,7 +2,7 @@
 An easy to use tool for automating aircrack-ng  
 wi-ck stands for wifi-crack (like wireless-fidelity, you get it ;) )  
 usage: wi-ck [path to dump]  
-&nbsp; wi-ck -c [path to cap file]  
+&nbsp; &nbsp; &nbsp; &nbsp; wi-ck -c [path to cap file]  
 ## Features:
 - Automatically turns on the wireless interface and starts dumping handshakes and list of APs and probes
 - Stop the monitor interface
