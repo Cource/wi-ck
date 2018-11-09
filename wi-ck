@@ -1,4 +1,6 @@
 #! /bin/bash
+hash aircrack-ng 2>/dev/null || { echo >&2 "wi-ck requires aircrack-ng but it's not installed.  Aborting."; exit 1; }
+hash xterm 2>/dev/null || { echo >&2 "wi-ck requires xterm but it's not installed.  Aborting."; exit 1; }
 if [ $# -gt 3 ]; then
 	echo ==============================
 	echo That is a way lot of arguments
@@ -40,6 +42,8 @@ elif [ "$1" == "-c" -o "$1" == "--crack" ]; then
 		echo '[+]Cracking the capture file'
 	        aircrack-ng -w $2 $3
 	fi
+elif [ "$1" == "-v" -o "$1" == "--version" ]; then
+	echo "wi-ck - wifi-crack version 0.0.2"
 else
 	echo '[+]Starting the monitor interface'
 	echo =========

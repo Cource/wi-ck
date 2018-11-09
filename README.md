@@ -15,6 +15,8 @@ To install this scirpt:
 
 ## Changelog:
 <pre>
+v(0.0.2): - Now checks if aircrack-ng and xterm are installed
+	  - displays the version of the script when -v is passed
 v(0.0.1): - Added a default dumping path to /tmp/crack so now you just have to 
             type 'wi-ck' and it does everything by itself 
           - Now uses xterm to display the ongoing dump
