@@ -33,14 +33,14 @@ elif [ "$1" == "-c" -o "$1" == "--crack" ]; then
 	if [ "$2" == "-k" -o "$2" == "--kali" ]; then
 		if uname -a | grep -q 'kali'; then
 	                echo '[+]Cracking the capture file'
-        	        aircrack-ng -w /usr/share/wordlists/rockyou.txt.gz $3
+        	        xterm -e aircrack-ng -w /usr/share/wordlists/rockyou.txt.gz $3
 		else
         		echo '[!]Sorry you are not running a kali distro'
 			echo '[!]Please re-run the script and enter the path to the wordlist after --crack'
 		fi
 	else
-		echo '[+]Cracking the capture file'
-	        aircrack-ng -w $2 $3
+		echo '[+]Cracking the capture file' "'$3'"
+	        xterm -e aircrack-ng -w $2 $3
 	fi
 elif [ "$1" == "-v" -o "$1" == "--version" ]; then
 	echo "wi-ck - wifi-crack version 0.0.2"
