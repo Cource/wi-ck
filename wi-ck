@@ -1,6 +1,6 @@
 #! /bin/bash
-hash aircrack-ng 2>/dev/null || { echo >&2 "wi-ck requires aircrack-ng but it's not installed.  Aborting."; exit 1; }
-hash xterm 2>/dev/null || { echo >&2 "wi-ck requires xterm but it's not installed.  Aborting."; exit 1; }
+hash aircrack-ng 2>/dev/null || { echo >&2 "[!]wi-ck requires aircrack-ng but it's not installed.  Aborting."; exit 1; }
+hash xterm 2>/dev/null || { echo >&2 "[!]wi-ck requires xterm but it's not installed.  Aborting."; exit 1; }
 if [ $# -gt 3 ]; then
 	echo ==============================
 	echo That is a way lot of arguments
@@ -22,7 +22,7 @@ elif [ $1 == "-h" -o $1 == "--help" ]; then
 	echo '--help, -h			Displays this help'
 	echo '-s, --stop			Stop the monitor interface'
 	echo '-c, --crack <wordlist> <capfile>	crack the capture file'
-	echo '->(kali users: use -k or --kali after -c to use rockyou.txt.gz)'
+	echo '->(kali users: use -k or --kali instead of <wordlist> to use rockyou.txt.gz)'
 	echo
 elif [ "$1" == "-s" -o "$1" == "--stop" ]; then
 	echo '[-]Stopping the monitor interface'
