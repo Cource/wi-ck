@@ -11,6 +11,7 @@ usage: wi-ck [path to dump]
 - Makes your life easier(if you are a hacker)
  ## Install:
 To install this scirpt:
+- do sudo chmod +x ./Install
 - do sudo ./Install inside wi-ck folder
 
 ## Changelog:
