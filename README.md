@@ -9,10 +9,11 @@ usage: wi-ck [path to dump]
 - Stop the monitor interface
 - Crack the capture file
 - Makes your life easier(if you are a hacker)
- ## Install:
-To install this scirpt:
-- do sudo chmod +x ./Install
-- do sudo ./Install inside wi-ck folder
+
+## Installation:
+Just run:  
+- python Install
+inside of the wi-ck folder
 
 ## Changelog:
 <pre>

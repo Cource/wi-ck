@@ -1,5 +1,14 @@
-echo "[+]Adding execute permissions"
-chmod +x wi-ck
-echo "[+]Installing wi-ck"
-cp wi-ck /usr/local/bin/wi-ck
-echo "[#]Successfully installed wi-ck"
+#!/bin/python3
+import os
+
+x = input('Which version of wi-ck do you want to install:\n'
+        '1) Python3 wi-ck(p)\n'
+        '2) Bash wi-ck(s)\n:')
+
+if x == '1':
+    print('Installing wi-ck (Python3)')
+    os.system('cp ./wi-ck.py /usr/bin/wi-ck')
+elif x == '2':
+    print('Installing wi-ck (shell)')
+    os.system('cp ./wi-ck.sh /usr/bin/wi-ck')
+else:print('Invalid option enter 1 or 2')
